@@ -32,7 +32,7 @@ int main() {
     int radius;
     printf("Enter a radius for a circle.\n");
     scanf("%d",&radius);
-    int areacircle = 3.14159265359*(radius^2);
+    int areacircle = 3.14159265359*(radius*radius);
     printf("The area of a circle with a radius of %d is %d.\n",radius,areacircle);
 
     return 0;
