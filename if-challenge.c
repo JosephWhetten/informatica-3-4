@@ -10,7 +10,7 @@ int main() {
 
     printf("Enter a year and I'll tell you if it's a leap year or not.\n");
     scanf("%d",&year);
-    if(year&4==0) {
+    /*if(year&4==0) {
         printf("sup\n");
 
         if(year&100!=0) {
@@ -22,6 +22,10 @@ int main() {
         if(year&400 == 0) {
             printf("IT'S A FLIPPIN LEAP YEAR\n");
         }
+    }*/
+
+    if((year%4==0 && year%100!=0) || year%400==0) {
+        printf("it's a leap year man\n");
     }
 
     return 0;
