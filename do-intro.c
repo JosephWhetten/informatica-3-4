@@ -7,7 +7,7 @@ int main() {
     printf("Enter a positive number please.\n");
     scanf("%lli",&num);
     
-    if(num / -10 != num) {
+    if(num > 0) {
         do {
             ++i;
         }
@@ -15,7 +15,7 @@ int main() {
     
         printf("The number of digits are %d\n",i);
     } else {
-        printf("IT'S A NEGATIVE NUMBER YOU NUMB\n");
+        printf("I SAID A POSITIVE NUMBER YOU NUMB GUY\n");
     }
 
     return 0;
