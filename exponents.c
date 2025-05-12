@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 int main() {
 
@@ -10,7 +11,7 @@ int main() {
     scanf("%lli",&num);
     printf("Enter an exponent\n");
     scanf("%lli",&exp);
-    printf("What loop do you want to use?\n1 - while loop\n2 - for loop\n3 - pow() funcion\nEnter your loop:\n");
+    printf("What loop do you want to use?\n1 - while loop\n2 - for loop\n3 - pow() funcion\n4 - Enter random numbers\nEnter your loop:\n");
     scanf("%d",&loop);
     
     long long expnum = num;
@@ -22,14 +23,20 @@ int main() {
     printf("%lli\n",num);
     } 
     else if(loop == 2) {
-    for(exp; exp > 1; --exp) {
-        num = num * expnum;
+        for(exp; exp > 1; --exp) {
+            num = num * expnum;
     }
     printf("%lli\n",num);
     }
+    else if(loop == 3) {
+        long long power = pow(num, exp);
+        printf("%lli\n",power);
+    }
     else {
-    long long power = pow(num, exp);
-    printf("%lli\n",power);
+        num = random() / ((double) 100 + 1) * 40;
+        exp = random() / ((double) 100 + 1) * 40;
+        long long power = pow(num, exp);
+        printf("%lli, %lli",num,exp);
     }
 
     return 0;
