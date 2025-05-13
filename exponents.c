@@ -33,10 +33,11 @@ int main() {
         printf("%lli\n",power);
     }
     else {
-        num = random() / ((double) 100 + 1) * 40;
-        exp = random() / ((double) 100 + 1) * 40;
+        srand(time(NULL));
+        num = (rand() % 15) + 1;
+        exp = (rand() % 15) + 1;
         long long power = pow(num, exp);
-        printf("%lli, %lli",num,exp);
+        printf("%lli\n",power);
     }
 
     return 0;
